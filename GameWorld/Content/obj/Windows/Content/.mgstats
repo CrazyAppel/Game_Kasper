@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/GitHub/Game/GameWorld/Content/Player.png","D:/GitHub/Game/GameWorld/Content/bin/Windows/Content/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.123102
+"D:/GitHub/Game/GameWorld/Content/Tile1.png","D:/GitHub/Game/GameWorld/Content/bin/Windows/Content/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.0070069
+"D:/GitHub/Game/GameWorld/Content/Tile2.png","D:/GitHub/Game/GameWorld/Content/bin/Windows/Content/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.0099995
+"D:/GitHub/Game/GameWorld/Content/Tile3.png","D:/GitHub/Game/GameWorld/Content/bin/Windows/Content/Tile3.xnb","TextureProcessor","Texture2DContent",1894,65621,0.0020009
