@@ -20,6 +20,7 @@ namespace GameWorld
         private bool hasJumped = false;
         public bool hasDied = false;
         float rotation = 0f;
+        private bool looksRight = false;
         public Vector2 origin;
         public Vector2 Position
         {
@@ -57,10 +58,12 @@ namespace GameWorld
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
+                looksRight = true;
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 velocity.X = -(float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
+                looksRight = false;
             }
             else
             {
@@ -137,7 +140,16 @@ namespace GameWorld
         public void Draw(SpriteBatch spriteBatch)
         {
             //spriteBatch.Draw(texture, rectangle, Color.White);
-            spriteBatch.Draw(texture, rectangle, null, Color.Red, rotation, origin, SpriteEffects.None, 0f);
+            if(looksRight == true)
+            {
+
+                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.None, 0f);
+            }
+            else
+            {
+
+                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+            }
 
         }
 

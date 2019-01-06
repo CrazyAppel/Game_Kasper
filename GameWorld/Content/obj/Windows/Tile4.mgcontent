@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>J:/SWAG/Game_Kasper/GameWorld/Content/Tile2.png</SourceFile>
-  <SourceTime>2019-01-06T23:54:33.2679814+01:00</SourceTime>
-  <DestFile>J:/SWAG/Game_Kasper/GameWorld/Content/bin/Windows/Content/Tile2.xnb</DestFile>
-  <DestTime>2019-01-06T23:54:55.3141889+01:00</DestTime>
+  <SourceFile>J:/SWAG/Game_Kasper/GameWorld/Content/Tile4.png</SourceFile>
+  <SourceTime>2017-03-09T14:50:50+01:00</SourceTime>
+  <DestFile>J:/SWAG/Game_Kasper/GameWorld/Content/bin/Windows/Tile4.xnb</DestFile>
+  <DestTime>2019-01-07T00:07:49.9713058+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

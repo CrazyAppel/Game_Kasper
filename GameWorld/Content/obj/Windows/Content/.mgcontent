@@ -4,12 +4,14 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/GitHub/Game/GameWorld/Content/Player.png</File>
-    <File>D:/GitHub/Game/GameWorld/Content/Tile2.png</File>
-    <File>D:/GitHub/Game/GameWorld/Content/Tile1.png</File>
-    <File>D:/GitHub/Game/GameWorld/Content/Tile3.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Player.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile1.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile2.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile3.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile4.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -35,8 +35,8 @@ namespace GameWorld
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            
-            map = new Map();
+
+            level = new Map();
             enemies = new List<Enemy>();
             enemy1 = new Enemy();
             enemy2 = new Enemy();
@@ -71,35 +71,14 @@ namespace GameWorld
             Texture2D blokText = Content.Load<Texture2D>("Tile1");
             camera = new Camera(GraphicsDevice.Viewport);
 
-            /*map.Generate(new int[,]{
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,1,2,2,0,1,0,0,0,0,0,0,0},
-                { 0,1,1,0,0,1,2,2,2,0,0,0,0,0,0,0,1,0},
-                { 1,2,2,3,3,2,2,2,2,2,2,2,3,2,1,3,2,1},
-               
-            }, 64);*/
+            level.Level2();
+           
 
-            map.Generate(new int[,]{
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0},
-                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-
-            }, 64);
+            
 
 
 
-            /*  level = new Map();
-              level.texture = blokText;
-              level.CreateWorld();*/
+            
 
             player.Load(Content);
             foreach (Enemy enemy in enemies)
@@ -133,15 +112,15 @@ namespace GameWorld
                 enemy.Update(gameTime, player);
             }
             //enemy.Update(gameTime, player);
-            foreach (CollisionTiles tile in map.CollisionTiles)
+            foreach (CollisionTiles tile in level.CollisionTiles)
             {
-                player.Collision(tile.Rectangle, map.Width, map.Height, tile.isDeadly);
+                player.Collision(tile.Rectangle, level.Width, level.Height, tile.isDeadly);
                 foreach (Enemy enemy in enemies)
                 {
-                    enemy.Collision(tile.Rectangle, map.Width, map.Height);
+                    enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 }
-                //enemy.Collision(tile.Rectangle, map.Width, map.Height);
-                camera.Update(player.Position, map.Width, map.Height);
+                //enemy.Collision(tile.Rectangle, level.Width, level.Height);
+                camera.Update(player.Position, level.Width, level.Height);
             }
             foreach (Enemy enemy in enemies)
             { 
@@ -166,7 +145,7 @@ namespace GameWorld
                 enemy.Draw(spriteBatch);
             }
             //enemy.Draw(spriteBatch);
-            map.Draw(spriteBatch);
+            level.Draw(spriteBatch);
             player.Draw(spriteBatch);
             spriteBatch.End();
 
