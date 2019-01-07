@@ -10,8 +10,10 @@ namespace GameWorld
     /// </summary>
     public class Game1 : Game
     {
+        private SpriteFont debugText;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
 
         Camera camera;
         Map level;
@@ -69,6 +71,7 @@ namespace GameWorld
         
             Tiles.Content = Content;
             Texture2D blokText = Content.Load<Texture2D>("Tile1");
+            debugText = Content.Load<SpriteFont>("Debug");
             camera = new Camera(GraphicsDevice.Viewport);
 
             level.Level2();
@@ -147,6 +150,7 @@ namespace GameWorld
             //enemy.Draw(spriteBatch);
             level.Draw(spriteBatch);
             player.Draw(spriteBatch);
+            spriteBatch.DrawString(debugText, player.debugerino, new Vector2(300, 220), Color.Black);
             spriteBatch.End();
 
             base.Draw(gameTime);

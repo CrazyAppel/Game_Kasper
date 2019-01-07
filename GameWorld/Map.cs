@@ -43,18 +43,20 @@ namespace GameWorld
                 for (int y = 0; y < map.GetLength(0); y++)
                 {
                     int number = map[y, x];
-
+                    //tiles
                     if (number > 0 && number < 3)
                     {
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false));
                     }
+                    //spikes
                     if (number == 3)
                     {
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true));
                     }
+                    //coins
                     if (number == 4)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, 25, 25), isDeadly = false));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle((x * size)+20, (y * size)+39, 25, 25), isDeadly = false));
                     }
 
 
@@ -93,7 +95,7 @@ namespace GameWorld
         }
         public void Level2()
         {
-            Generate(new int[,]
+            /*Generate(new int[,]
             {
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0},
@@ -102,6 +104,18 @@ namespace GameWorld
                 { 0,0,0,4,0,0,0,1,2,1,0,0,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,1,2,2,0,1,0,0,0,0,0,0,0},
                 { 0,0,1,0,0,1,2,2,2,4,0,0,0,0,0,0,1,0},
+                { 1,2,2,3,3,2,2,2,2,2,2,2,3,2,1,3,2,1},
+            }, 64);*/
+
+            Generate(new int[,]
+            {
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,2,0,4,0,0,0,0,0,0,0,0},
+                { 0,4,0,0,0,0,2,2,2,2,0,0,0,4,0,0,4,0},
                 { 1,2,2,3,3,2,2,2,2,2,2,2,3,2,1,3,2,1},
             }, 64);
         }

@@ -12,10 +12,13 @@ namespace GameWorld
 {
     class Player
     {
+
+
         private Texture2D texture;
         private Vector2 position = new Vector2(450,100);
         private Vector2 velocity;
         private Rectangle rectangle;
+        public string debugerino = "yolo";
         public Color[] textureData { get; set; }
         private bool hasJumped = false;
         public bool hasDied = false;
@@ -39,7 +42,6 @@ namespace GameWorld
         public void Update(GameTime gameTime)
         {
             position += velocity;
-            //rectangle = new Rectangle((int)position.X, (int)position.Y, 64, 64);
             rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
             origin = new Vector2(0, 0);
 
@@ -82,8 +84,6 @@ namespace GameWorld
         {
             if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.textureData))
             {
-                //snowball.IsRemoved = true;
-                //hasDied = true;
                 position = new Vector2(450, 100);
             }
         }
@@ -110,12 +110,6 @@ namespace GameWorld
                 velocity.Y = 1f;
             }
 
-            /*if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.textureData))
-                {
-                    //snowball.IsRemoved = true;
-                    //hasDied = true;
-                    position = new Vector2(150, 384);
-                }*/
             if (isDeadly == true && (rectangle.TouchTopOf(newRectangle) /*|| rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle)*/ || rectangle.TouchBottomOf(newRectangle)))
             {
                 position = new Vector2(450, 100);
