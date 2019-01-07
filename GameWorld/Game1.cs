@@ -17,6 +17,8 @@ namespace GameWorld
         Map level;
         Enemy enemy1, enemy2;
         List<Enemy> enemies;
+        Coin coin1, coin2;
+        List<Coin> coins;
         Map map;
         Player player;
         //bool isDeadly;
@@ -38,8 +40,11 @@ namespace GameWorld
 
             level = new Map();
             enemies = new List<Enemy>();
+            coins = new List<Coin>();
             enemy1 = new Enemy();
             enemy2 = new Enemy();
+            coin1 = new Coin();
+            coin2 = new Coin();
             player = new Player();
             initiateEnemies();
             base.Initialize();
@@ -53,12 +58,16 @@ namespace GameWorld
 
         private void initiateEnemies()
         {
+            coin1.position = new Vector2(400, 100);
+            coin2.position = new Vector2(600, 100);
             enemy1.position = new Vector2(900, 380);
             enemy2.position = new Vector2(100, 380);
             enemy1.speed = 1f;
             enemy2.speed = 2f;
             enemies.Add(enemy1);
             enemies.Add(enemy2);
+            coins.Add(coin1);
+            coins.Add(coin2);
         }
         protected override void LoadContent()
         {
@@ -68,15 +77,11 @@ namespace GameWorld
             //enemy = new Enemy(Content.Load<Texture2D>("Player"), new Vector2(900, 384), 1000);
         
             Tiles.Content = Content;
-            Texture2D blokText = Content.Load<Texture2D>("Tile1");
+            
             camera = new Camera(GraphicsDevice.Viewport);
 
             level.Level2();
            
-
-            
-
-
 
             
 
@@ -86,6 +91,11 @@ namespace GameWorld
 
                 enemy.Load(Content);
             }
+            foreach (Coin coin in coins)
+            {
+                coin.Load(Content);
+            }
+            
             //enemy.Load(Content);
             // TODO: use this.Content to load your game content here
         }
@@ -111,6 +121,10 @@ namespace GameWorld
             {
                 enemy.Update(gameTime, player);
             }
+            foreach (Coin coin in coins)
+            {
+                coin.Update(gameTime, player);
+            }
             //enemy.Update(gameTime, player);
             foreach (CollisionTiles tile in level.CollisionTiles)
             {
@@ -119,12 +133,17 @@ namespace GameWorld
                 {
                     enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 }
+               
                 //enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 camera.Update(player.Position, level.Width, level.Height);
             }
             foreach (Enemy enemy in enemies)
             { 
             player.checkEnemyCollision(enemy);
+            }
+            foreach (Coin coin in coins)
+            {
+                player.checkCoinColision(coin);
             }
             base.Update(gameTime);
         }
@@ -144,9 +163,19 @@ namespace GameWorld
             {
                 enemy.Draw(spriteBatch);
             }
+            foreach (Coin coin in coins)
+            {
+                if(coin.picked == false)
+                {
+                    coin.Draw(spriteBatch);
+                }
+                
+                
+            }
             //enemy.Draw(spriteBatch);
             level.Draw(spriteBatch);
             player.Draw(spriteBatch);
+            
             spriteBatch.End();
 
             base.Draw(gameTime);

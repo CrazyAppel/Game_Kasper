@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Coin.cs" />
     <Compile Include="CollisionTiles.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Game1.cs" />

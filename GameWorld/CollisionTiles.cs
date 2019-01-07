@@ -12,10 +12,12 @@ namespace GameWorld
     {
         public CollisionTiles(int tileId, Rectangle newRectangle, bool isDeadly)
         {
+            
             if (isDeadly == true)
             {
                 this.isDeadly = true;
             }
+            
             texture = Content.Load<Texture2D>("Tile" + tileId);
             this.Rectangle = newRectangle;
         }

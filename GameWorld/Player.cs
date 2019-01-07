@@ -12,6 +12,8 @@ namespace GameWorld
 {
     class Player
     {
+
+       
         private Texture2D texture;
         private Vector2 position = new Vector2(450,100);
         private Vector2 velocity;
@@ -49,8 +51,6 @@ namespace GameWorld
                 hasJumped = true;
                 velocity.Y += 0.7f;
             }
-
-       
         }
 
         private void Input(GameTime gameTime)
@@ -88,6 +88,16 @@ namespace GameWorld
             }
         }
 
+        public void checkCoinColision(Coin coin)
+        {
+            if (IntersectsPixel(this.rectangle, this.textureData, coin.rectangle, coin.textureData))
+            {
+                
+                coin.picked = true;
+                
+            }
+        }
+
         public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly)
         {
             if (rectangle.TouchTopOf(newRectangle))
@@ -119,6 +129,7 @@ namespace GameWorld
             if (isDeadly == true && (rectangle.TouchTopOf(newRectangle) /*|| rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle)*/ || rectangle.TouchBottomOf(newRectangle)))
             {
                 position = new Vector2(450, 100);
+               
             }
             
 

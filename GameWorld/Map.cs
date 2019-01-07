@@ -12,10 +12,9 @@ namespace GameWorld
     {
         public Texture2D texture;
         public bool isDeadly;
-        
        // private Tiles[,] blokArray = new Tiles[8, 18];
         private List<CollisionTiles> collisionTiles = new List<CollisionTiles>();
-
+        
       
         public List<CollisionTiles> CollisionTiles
         {
@@ -54,8 +53,11 @@ namespace GameWorld
                     }
                     if (number == 4)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, 25, 25), isDeadly = false));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false));
                     }
+
+
+
 
 
                     width = (x + 1) * size;
@@ -97,11 +99,11 @@ namespace GameWorld
             {
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0},
-                { 0,0,4,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,4,0,0,0,1,2,1,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,1,2,2,0,1,0,0,0,0,0,0,0},
-                { 0,0,1,0,0,1,2,2,2,4,0,0,0,0,0,0,1,0},
+                { 0,0,1,0,0,1,2,2,2,0,0,0,0,0,0,0,1,0},
                 { 1,2,2,3,3,2,2,2,2,2,2,2,3,2,1,3,2,1},
             }, 64);
         }
