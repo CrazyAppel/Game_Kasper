@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/GitHub/Game_Kasper/GameWorld/Content/Tile4.png</SourceFile>
-  <SourceTime>2019-01-07T00:24:04.8834874+01:00</SourceTime>
-  <DestFile>D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Content/Tile4.xnb</DestFile>
-  <DestTime>2019-01-07T00:24:42.865471+01:00</DestTime>
+  <SourceFile>J:/SWAG/Game_Kasper/GameWorld/Content/Tile4.png</SourceFile>
+  <SourceTime>2017-03-09T14:50:50+01:00</SourceTime>
+  <DestFile>J:/SWAG/Game_Kasper/GameWorld/Content/bin/Windows/Content/Tile4.xnb</DestFile>
+  <DestTime>2019-01-07T00:09:26.9447622+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
+  <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
+  <ProcessorTime>2018-09-23T23:55:52+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

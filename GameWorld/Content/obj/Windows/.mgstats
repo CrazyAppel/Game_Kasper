@@ -1,7 +1,0 @@
-Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/GitHub/Game_Kasper/GameWorld/Content/File.spritefont","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Debug.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0.3124995
-"D:/GitHub/Game_Kasper/GameWorld/Content/Player.png","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.0160136
-"D:/GitHub/Game_Kasper/GameWorld/Content/Tile1.png","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.0090085
-"D:/GitHub/Game_Kasper/GameWorld/Content/Tile2.png","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.0090092
-"D:/GitHub/Game_Kasper/GameWorld/Content/Tile3.png","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Tile3.xnb","TextureProcessor","Texture2DContent",1894,65621,0.0030036
-"D:/GitHub/Game_Kasper/GameWorld/Content/Tile4.png","D:/GitHub/Game_Kasper/GameWorld/Content/bin/Windows/Tile4.xnb","TextureProcessor","Texture2DContent",11944,67685,0.0030022
